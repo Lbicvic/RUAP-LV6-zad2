@@ -27,6 +27,7 @@ namespace CallRequestResponseService
     {
         static void Main(string[] args)
         {
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
             InvokeRequestResponseService().Wait();
         }
 
@@ -43,7 +44,7 @@ namespace CallRequestResponseService
                             new StringTable()
                             {
                                 ColumnNames = new string[] {"Recency", "Frequency", "Monetary", "Time", "Class"},
-                                Values = new string[,] {  { "0", "0", "0", "0", "0" },  { "0", "0", "0", "0", "0" },  }
+                                Values = new string[,] {  { "2", "50", "12500", "98", "1" },  { "0", "13", "3250", "28", "1" },  }
                             }
                         },
                     },
